@@ -1,9 +1,0 @@
-// Insert Many.
-db.users.insertMany([
-    { "name": "Joey", "group": "sales", "password": "P@ssw01d", "mail": "test01@email.com" },
-    { "name": "Marie", "group": "sales", "password": "P@ssw02d", "mail": "test02@email.com" },
-    { "name": "Elton", "group": "accounting", "password": "P@ssw03d", "mail": "test03@email.com" },
-    { "name": "Paola", "group": "marketing", "password": "P@ssw04d", "mail": "test04@email.com" }]);
-
-// Remove field password all rows in table users.
-db.users.update({}, { $unset: { password: 1 } }, { multi: true });
