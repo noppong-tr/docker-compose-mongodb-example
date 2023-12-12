@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mongo_container:
+    image: mongo:latest
+    restart: on-failure
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      # MONGO_INITDB_DATABASE: project
+    ports:
+      - 8017:27017
+    volumes:
+      - ./mongodb_data:/data/db
+      # - ./dump:/dump:ro
+      # - ./backup:/backup
