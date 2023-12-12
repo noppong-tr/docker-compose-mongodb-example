@@ -1,0 +1,5 @@
+# map volume
+mongodb_data/
+
+# note command mongosh
+example-mongosh-command.js.back
